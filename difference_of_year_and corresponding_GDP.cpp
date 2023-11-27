@@ -1,6 +1,6 @@
-Q1. Find the difference of year and find the year and the corresponding gdp
-year= {1990,1991,1992,1993,1994....}
-gdp={220,440,660,865,293,239....}
+// Q1. Find the difference of year and find the year and the corresponding gdp
+// year= {1990,1991,1992,1993,1994....}
+// gdp={220,440,660,865,293,239....}
 
 
 #include <iostream>
