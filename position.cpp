@@ -1,5 +1,5 @@
-#find first and last position of the same number that occured in the array
-#include <iostream>
+// #find first and last position of the same number that occured in the array
+// #include <iostream>
 
 using namespace std;
 
