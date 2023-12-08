@@ -5,11 +5,11 @@ typedef struct queue
     int val;
     struct queue *next;
 }node;
-node *temp=NULL;
 
+node *temp=NULL;
 node *insertf(node *f,int x)
 {
-     temp=new queue;
+    temp=new queue;
     if(temp==NULL)
         cout<<"overflow"<<endl;
     else{
@@ -26,14 +26,17 @@ node *insertf(node *f,int x)
     }
     return f;
 }
+
 node *insertr(node *r)
 {
     int x=-1;
-     temp=new queue;
+    temp=new queue;
     if(temp==NULL)
         cout<<"overflow"<<endl;
     else
     {
+        cout<<"Enter Number to insert ";
+        cin>>x;
         temp->val=x;
         temp->next=NULL;
 
@@ -47,9 +50,10 @@ node *insertr(node *r)
     }
     return r;
 }
+
 node *deletef(node *f)
 {
-  if(f==NULL)
+    if(f==NULL)
         cout<<"underflow"<<endl;
     else
     {
@@ -62,10 +66,12 @@ node *deletef(node *f)
 
         delete(temp);
     }
+    return f;
 }
-node *deleter(node *r,node*f)
+
+node *deleter(node *f,node*r)
 {
-if(r==NULL)
+    if(r==NULL)
         cout<<"underflow"<<endl;
     else
     {
@@ -78,11 +84,11 @@ if(r==NULL)
         r=temp;
         r->next=NULL;
     }
+    return r;
 }
 
 void display(node *f)
 {
-    temp=new queue;
     temp=f;
     do{
         cout<<" "<<temp->val<<endl;
@@ -94,7 +100,7 @@ int main()
       int ch,ele;
       node *fr=NULL;
       node *rr=NULL;
-    do{
+        do{
         cout<<"enter 1 to insert at front"<<endl;
         cout<<"enter 2 to insert at rear"<<endl;
         cout<<"enter 3 to delete at front"<<endl;
@@ -106,18 +112,25 @@ int main()
         case 1:
             cout<<"enter your element at front :"<<endl;
             cin>>ele;
-            insertf(fr,ele);
+            fr=insertf(fr,ele);
+            if(rr==NULL)
+                rr=fr;
+
             break;
         case 2:
-            cout<<"enter your element at rear :"<<endl;
-            cin>>ele;
-            insertr(rr);
+            rr=insertr(rr);
+            if(fr==NULL)
+                fr=rr;
             break;
         case 3:
-           deletef(fr);
+           fr=deletef(fr);
+           if(fr==NULL)
+                rr=fr;
            break;
         case 4:
-            deleter(rr,fr);
+            rr=deleter(fr,rr);
+            if(fr==NULL)
+                fr=rr;
             break;
         case 5:
             display(fr);
