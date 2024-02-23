@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//to check the heap this is done
 int checkheap(int arr[], int n, int i)
 {
     int left = 2 * i + 1;
