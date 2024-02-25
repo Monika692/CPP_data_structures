@@ -4,7 +4,7 @@ int count=0;
 void rec(int n)
 {
     if(n>0)
-    {
+    { //check on
         n=n/10;
         count++;
         rec(n/10);
