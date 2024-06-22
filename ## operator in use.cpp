@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
   int xy=100;
-  int str1="Hello World";
+  string str1="Hello World";
 
   cout<<concat(x,y)<<endl;
   cout<<concat(str,1)<<endl;
