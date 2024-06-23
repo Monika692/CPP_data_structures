@@ -6,7 +6,7 @@ int main()
   int xy=100;
   string str1="Hello World";
 
-  cout<<concat(x,y)<<endl;
+  cout<<concat(x,y)<<endl; //Will concat it together
   cout<<concat(str,1)<<endl;
   return 0;
 }
